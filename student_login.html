@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radiance</title>
+    <link rel="stylesheet" href="../Login_signup/login.css">
+</head>
+<body>
+    <!-- <h2>Radiance E-learning Platform</h2> -->
+    <div class="container">
+        <form id="login-form">
+            <label for="username">Email:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Login</button>
+        </form>
+
+        <div class="switch-page">
+            <p>New Student? <a href="#" onclick="toggleForm()">Sign up here</a>.</p>
+            <p>Back to <a href="./welcome_page.html">Welcome</a></p>
+        </div>
+    </div>
+
+    <div class="container" style="display: none;" id="signup-container">
+        <form id="signup-form">
+            <label for="newUsername">Email:</label>
+            <input type="text" id="newUsername" name="newUsername" required>
+
+            <label for="newPassword">Password:</label>
+            <input type="password" id="newPassword" name="newPassword" required>
+
+            <button type="submit">Sign up</button>
+        </form>
+
+        <div class="switch-page">
+            <p>Already have an account? <a href="#" onclick="toggleForm()">Log in here</a>.</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleForm() {
+            var loginForm = document.getElementById("login-form");
+            var signupContainer = document.getElementById("signup-container");
+
+            loginForm.style.display = loginForm.style.display === "none" ? "block" : "none";
+            signupContainer.style.display = signupContainer.style.display === "none" ? "block" : "none";
+        }
+    </script>
+</body>
+</html>
